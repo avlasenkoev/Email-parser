@@ -44,7 +44,7 @@ class ParserYellowpages():
         if url == None:
             return None
         r = requests.get(url)
-        soup = BeautifulSoup(r.text, 'html.parser')
+        soup = BeautifulSoup(r.text, 'lxml')
         email_div = soup.find_all('div', {'class':'business-card-footer'})
         for tag in email_div:
             result = tag.find('a', {'class':'email-business'})

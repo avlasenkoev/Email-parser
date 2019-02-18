@@ -103,7 +103,3 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-#excel
-emails.xlsx
-FiveStars.xlsx
-Geka.xlsx

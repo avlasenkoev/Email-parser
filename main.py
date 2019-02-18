@@ -1,15 +1,16 @@
+import time 
+import pandas
+
 from yellowpages import ParserYellowpages
 from google_check import Google
 from facebook import Facebook
 from yelp import Yelp
-import time 
-import pandas
 
 
 def input():
-    file = 'test_data.xlsx'
-    xl = pandas.ExcelFile(file)
-    df = xl.parse('Sheet1')
+
+    with pandas.ExcelFile('test_data.xlsx') as xl:
+        df = xl.parse('Sheet1')
 
     name = df[1].tolist()
     city = df[2].tolist()
@@ -106,10 +107,9 @@ def to_exel(data):
         data,
         columns=['Name', 'Address', 'Mail']
         )
-    file = 'emails.xlsx'
-    writer = pandas.ExcelWriter(file)
-    email_data.to_excel(writer, "Sheet1")
-    writer.save()
+    with pandas.ExcelWriter('emails.xlsx') as xl:
+        email_data.to_excel(writer, "Sheet1")
+        writer.save()
     print('export finished, well done!!!')
 
 if __name__ == '__main__':

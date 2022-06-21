@@ -6,7 +6,7 @@ get==2018.11.19
 idna==2.8
 jdcal==1.4
 lxml==4.3.1
-numpy==1.16.1
+numpy==1.22.0
 openpyxl==2.6.0
 pandas==0.24.1
 post==2018.11.20

@@ -5,7 +5,7 @@ et-xmlfile==1.0.1
 get==2018.11.19
 idna==2.8
 jdcal==1.4
-lxml==4.3.1
+lxml==4.9.1
 numpy==1.16.1
 openpyxl==2.6.0
 pandas==0.24.1
